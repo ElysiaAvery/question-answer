@@ -1,53 +1,44 @@
-# Question-answer
+# _Question-answer_
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
 
-## Prerequisites
+#### By _[**Elysia Avery Nason**](https://github.com/elysiaavery)_
 
-You will need the following things properly installed on your computer.
+## Description
+A web app that allows the user to submit a question that can be answered by other users.
 
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+## Specs
 
-## Installation
+| Behaviour                                              | Input                                            | Output                                                                                                                                       |
+|--------------------------------------------------------|--------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| Can instantiate a question JSON object.                | "Is it okay to give a dog a grape?"              | {questions: ([   "author": "Anna"   "question":"Is it okay to give a dog a grape?"   "notes":"i have a new puppy who is only 10 weeks."  ])} |
+| Can instantiate a answer JSON object.                  | "Grapes can harm your dog!"                      | {answers: ([ "author":"Polly"  "question":"Grapes can harm your dog!" ])}                                                                    |
+| questions and answers have a one-to-many relationship. | question: "" answer1: "" answer2: "" answer3: "" | n/a                                                                                                                                          |
 
-* `git clone <repository-url>` this repository
-* `cd question-answer`
-* `npm install`
-* `bower install`
+## Setup/Installation Requirements
 
-## Running / Development
+* In your terminal window:
+  * `$ git clone https://github.com/ElysiaAvery/question-answer`
+  * Navigate to the question-answer directory: `$ cd question-answer`
+  * Enter the command: `$ ember s`
+* In the browser of your choosing, navigate to "localhost:4200" (tested in Chrome).
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+## Known Bugs
 
-### Code Generators
+None
 
-Make use of the many generators for code, try `ember help generate` for more details
+## Support and contact details
 
-### Running Tests
+Elysia Nason: _elysia.avery@gmail.com_
 
-* `ember test`
-* `ember test --server`
+## Technologies Used
 
-### Building
+_JavaScript,
+Ember.js,
+Bower,
+Sass_
 
-* `ember build` (development)
-* `ember build --environment production` (production)
+### License
 
-### Deploying
+This webpage is licensed under the GPL license.
 
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+Copyright &copy; 2016 **_Elysia Avery Nason_**
