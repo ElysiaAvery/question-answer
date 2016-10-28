@@ -6,7 +6,12 @@ export default Ember.Route.extend({
   },
   actions: {
     destroyQuestion(model) {
-      model.destroyRecord();
+      var answer_deletions = model.get('answers').map(function(answer) {
+        return answer.destroyRecord();
+      });
+      Ember.RSVP.all(answer_deletions).then(function() {
+        return model.destroyRecord();
+      });
       this.transitionTo('index');
     },
     updateQuestion(model, params) {
@@ -26,6 +31,10 @@ export default Ember.Route.extend({
         return question.save();
       });
       this.transitionTo('question', question);
+    },
+    destroyAnswer(answer) {
+      answer.destroyRecord();
+      this.transitionTo('index');
     }
   }
 });
