@@ -5,7 +5,7 @@ export default Ember.Component.extend({
     makeNewQuestion() {
       var params = {
         author: this.get('author') ? this.get('author'):'',
-        question: this.get('question') ? this.get('question'):'',
+        userQuestion: this.get('userQuestion') ? this.get('userQuestion'):'',
         notes: this.get('notes') ? this.get('notes'):'',
       };
       this.sendAction('makeNewQuestion', params);

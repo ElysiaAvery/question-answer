@@ -9,7 +9,7 @@ export default Ember.Component.extend({
     updateQuestion(question) {
       var params = {
         author: this.get('author'),
-        question: this.get('question'),
+        userQuestion: this.get('userQuestion'),
         notes: this.get('notes')
       };
       this.set('showEditForm', false);
