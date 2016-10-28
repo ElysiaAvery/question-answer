@@ -6,7 +6,7 @@
 </div>
 
 <ul>
-  {{#each question.answers as |answer|}}
+  {{#each model.answers as |answer|}}
     <li>{{answer.answer}} - by: <em>{{answer.author}}</em></li>
   {{/each}}
 </ul>
