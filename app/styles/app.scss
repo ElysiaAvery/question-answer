@@ -6,7 +6,18 @@
 }
 
 body {
-  color: black;
+  color: #38313C;
+  font-family: 'Molengo', sans-serif;
+}
+
+h1{
+  font-family: 'Josefin Slab', serif;
+  font-size: 4em;
+}
+
+#and {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 75px;
 }
 
 header {
@@ -19,9 +30,17 @@ header {
   margin-left: -12%;
 }
 
+#menu {
+  background-color: #D6D4D7;
+}
+
+.menu-link {
+  color: #54475D;
+}
+
 .well {
   border-radius: 25px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
   padding-top: 5px;
   padding-bottom: 15px;
   padding-left: 15px;
