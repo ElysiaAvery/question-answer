@@ -1,4 +1,5 @@
-<div>
+
+<div class=" col-sm-6 well">
   <h1>Add a New Question</h1>
   <form>
     <div class='form-group'>
@@ -8,12 +9,12 @@
 
     <div class='form-group'>
       <label for="userQuestion">Enter Your Question: </label>
-      {{textarea value=userQuestion id="userQuestion"}}
+      {{textarea class=form-control value=userQuestion id="userQuestion"}}
     </div>
 
     <div class='form-group'>
       <label for="notes">Enter Additional Notes: </label>
-      {{textarea value=notes id="notes"}}
+      {{textarea class=form-control value=notes id="notes"}}
     </div>
     <button {{action 'makeNewQuestion'}}>Add Question</button>
   </form>

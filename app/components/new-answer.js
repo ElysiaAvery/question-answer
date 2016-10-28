@@ -7,10 +7,12 @@ export default Ember.Component.extend({
        this.set('addNewAnswer', true);
     },
       saveAnswer() {
+      var newTime = new Date();
       var params = {
         author: this.get('author'),
         answer: this.get('answer'),
-        question: this.get('question')
+        question: this.get('question'),
+        time: newTime.toDateString()
     };
       this.set('addNewAnswer', false);
       this.sendAction('saveAnswer', params);

@@ -1,8 +1,7 @@
-<div class="row panel">
+
   <div class="col-sm-3"></div>
-  <div class="col-sm-6">
-    {{#link-to 'questions' question.id}}<h4><strong>{{question.userQuestion}}</strong></h4>{{/link-to}}
-    <h6><em>{{question.author}}</em></h6>
+  <div class="well col-sm-6 ">
+    {{#link-to 'questions' question.id}}<h3><strong>{{question.userQuestion}}</strong></h3>{{/link-to}}
+    <h4><em>Asked By: {{question.author}} on {{question.time}}</em></h4>
   </div>
   <div class="col-sm-3"></div>
-</div>
