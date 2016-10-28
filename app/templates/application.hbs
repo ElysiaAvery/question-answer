@@ -5,7 +5,8 @@
   <header>
     <div class="top-bar">
     {{#side-menu-toggle}}
-    <span id="hamburger" class="glyphicon glyphicon-menu-hamburger"></span>
+    <!-- <span id="hamburger" class="glyphicon glyphicon-menu-hamburger"></span> -->
+    {{t-menu a="x-cross" is-open=false id="hamburger"}}
       {{#side-menu width="25%" id="menu" side="right"}}
         <ul class="nav-list">
             {{#link-to "index" class="menu-link"}}
