@@ -24,8 +24,6 @@ header {
   background-color: #EAEAEA;
   padding: 25px;
   display: block;
-  // margin-left: auto;
-  // margin-right: auto;
   margin-right: -15%;
   margin-left: -12%;
 }
@@ -36,12 +34,19 @@ header {
 
 .menu-link {
   color: #54475D;
+  text-decoration: none;
 }
 
 #newAnswer {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+button {
+  width: 25%;
+  background-color: #ACAB90;
+  border-radius: 25px;
 }
 
 .well {

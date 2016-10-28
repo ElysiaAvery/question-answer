@@ -5,15 +5,16 @@
   <header>
     <div class="top-bar">
     {{#side-menu-toggle}}
-    <!-- <span id="hamburger" class="glyphicon glyphicon-menu-hamburger"></span> -->
-    {{t-menu a="x-cross" is-open=false id="hamburger"}}
+    {{t-menu a="butterfly" is-open=false id="hamburger"}}
       {{#side-menu width="25%" id="menu" side="right"}}
         <ul class="nav-list">
             {{#link-to "index" class="menu-link"}}
+            <span class="glyphicon glyphicon-home"></span>
               Homepage
             {{/link-to}}
             <br>
             {{#link-to 'new-question' class="menu-link"}}
+            <span class="glyphicon glyphicon-pencil"></span>
               New Question
             {{/link-to}}
         </ul>
@@ -21,6 +22,7 @@
     {{/side-menu-toggle}}
     </div>
     {{#link-to 'index'}}<h1 class="menu-link">Questions <span id="and">&amp;</span> Answers Forum</h1>{{/link-to}}
+    <p>By: Elysia Avery Nason</p>
   </header>
 </div>
 
