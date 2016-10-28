@@ -1,10 +1,15 @@
 <div class="col-sm-3"></div>
 <div class="col-sm-6">
-    <h4><strong>{{model.question}}</strong></h4>
-    <h6><em>{{model.author}}</em></h6>
-    <p>{{model.notes}}</p>
-  </div>
+  <h4><strong>{{model.question}}</strong></h4>
+  <h6><em>{{model.author}}</em></h6>
+  <p>{{model.notes}}</p>
 </div>
+
+<ul>
+  {{#each question.answers as |answer|}}
+    <li>{{answer.answer}} - by: <em>{{answer.author}}</em></li>
+  {{/each}}
+</ul>
 <button {{action 'destroyQuestion' model}}>Delete Question</button>
 {{edit-question updateQuestion='updateQuestion' question=model}}
 {{new-answer saveAnswer="saveAnswer" question=model}}

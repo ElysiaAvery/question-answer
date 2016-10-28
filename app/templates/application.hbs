@@ -1,0 +1,31 @@
+<!-- <div id="backg">
+  <img src="/images/camping.jpeg" class="img img-responsive" >
+</div> -->
+  <header>
+    <div class="top-bar">
+    {{#side-menu-toggle}}
+      <span id="hamburger" class="glyphicon glyphicon-menu-hamburger"></span>
+      {{#side-menu width="25%" id="menu"}}
+        <ul class="nav-list">
+            {{#link-to "index" class="menu-link"}}
+              Homepage
+            {{/link-to}}
+            <br>
+            {{#link-to 'new-question' class="menu-link"}}
+              New Question
+            {{/link-to}}
+        </ul>
+      {{/side-menu}}
+    {{/side-menu-toggle}}
+    </div>
+  </header>
+
+<div class= "container">
+  <h1>Question &amp; Answer Forum</h1>
+  {{content-backdrop}}
+    {{outlet}}
+  <hr>
+  <footer>
+
+  </footer>
+</div>
