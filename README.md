@@ -19,6 +19,8 @@ A web app that allows the user to submit a question that can be answered by othe
 * In your terminal window:
   * `$ git clone https://github.com/ElysiaAvery/question-answer`
   * Navigate to the question-answer directory: `$ cd question-answer`
+  * `$ npm install`
+  * `$ bower install`
   * Enter the command: `$ ember s`
 * In the browser of your choosing, navigate to "localhost:4200" (tested in Chrome).
 
