@@ -1,2 +1,4 @@
-<li>{{answer.answer}}<br>By: <em>{{answer.author}}</em><br> {{answer.time}}</li>
+<li>{{answer.answer}}<br>By: <em>{{answer.author}}</em><br> {{answer.time}}<br>Likes: {{vote}}</li>
+<button {{action 'upVote' vote}}><i class="thumbs up icon"></i></button>
+<button {{action 'downVote' vote}}><i class="thumbs down icon"></i></button>
 <button {{action 'delete' answer}}>Delete Answer</button>
