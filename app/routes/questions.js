@@ -1,7 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-
+  answerCount: Ember.computed('model.answers.length', function(){
+    return this.get('model.answers.length') + ' - Answers';
+  }),
   model: function(params) {
     return this.store.findRecord('question', params.question_id);
   },

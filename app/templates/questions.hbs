@@ -1,6 +1,8 @@
 
 <div class="well col-sm-6">
   <h4><strong>{{model.userQuestion}}</strong></h4>
+  {{log model.data.time}}
+  {{model.answers.length}}
   <h4><em>Asked By: {{model.author}}</em></h4>
   <h5>{{model.time}}</h5>
   <p>{{model.notes}}</p>
@@ -9,11 +11,11 @@
   <button {{action 'destroyQuestion' model}}>Delete Question</button>
 </div>
 <div class=" well col-sm-6">
+{{new-answer saveAnswer="saveAnswer" question=model}}
 <h4>Answers: </h4>
 <ul>
   {{#each model.answers as |answer|}}
     {{answer-tile answer=answer destroyAnswer="destroyAnswer" like="like" dislike="dislike"}}
   {{/each}}
 </ul>
-{{new-answer saveAnswer="saveAnswer" question=model}}
 </div>
