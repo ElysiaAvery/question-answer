@@ -1,0 +1,7 @@
+<div class="well col-sm-6">
+  <h2>Questions That You Follow:</h2>
+  {{#each favoriteQuestions.questions as |question|}}
+    <h2>{{#link-to 'questions' question.id}}{{question.userQuestion}}{{/link-to}}</h2>
+    <h3>Asked By: {{question.author}}</h3>
+  {{/each}}
+</div>

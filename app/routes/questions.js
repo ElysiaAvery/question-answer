@@ -1,8 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  // sortBy: ['vote:desc'],
-  // sortedAnswers: Ember.computed.sort('model.answers', 'sortBy'),
+  favoriteQuestions: Ember.inject.service(),
   model: function(params) {
     return this.store.findRecord('question', params.question_id);
   },
@@ -52,6 +51,10 @@ export default Ember.Route.extend({
         }
       });
       answer.save();
+    },
+    addToFavorites(question) {
+      console.log(question + " questions.js");
+      this.get('favoriteQuestions').add(question);
     }
   }
 });

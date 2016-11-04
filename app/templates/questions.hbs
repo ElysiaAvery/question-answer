@@ -1,6 +1,6 @@
 
 <div class="well col-sm-6">
-  <h4><strong>{{model.userQuestion}}</strong></h4>
+  <h2><strong>{{model.userQuestion}}</strong></h2><button {{action 'addToFavorites' model}}>Follow This Question</button>
   <h4><em>Asked By: {{model.author}}</em></h4>
   <h5>{{model.time}}</h5>
   <p>{{model.notes}}</p>
