@@ -13,10 +13,11 @@ export default Ember.Component.extend({
         answer: this.get('answer'),
         question: this.get('question'),
         time: newTime.toDateString(),
-        vote: this.get('vote') ? this.get('vote'):'',
+        vote: this.get('vote'),
     };
       this.set('addNewAnswer', false);
       this.sendAction('saveAnswer', params);
+      // this.set(params, '');
     }
   }
 });
