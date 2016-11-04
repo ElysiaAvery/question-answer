@@ -1,5 +1,5 @@
 <div class="well col-sm-6">
   {{#link-to 'questions' question.id class="menu-link"}}<h2><strong>{{question.userQuestion}}</strong></h2>{{/link-to}}
   <h4><em>{{secondHeader}}</em></h4>
-  <h5>This question has {{question.answers.length}} answers.</h5>
+  <h5>This question has {{question.answers.length}} answers.{{no-answers question}}</h5>
 </div>
