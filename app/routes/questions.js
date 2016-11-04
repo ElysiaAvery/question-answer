@@ -31,11 +31,9 @@ export default Ember.Route.extend({
       newAnswer.save().then(function() {
         return question.save();
       });
-      this.transitionTo('question', question);
     },
     destroyAnswer(answer) {
       answer.destroyRecord();
-      this.transitionTo('question', question);
     },
     like(answer, params) {
       Object.keys(params).forEach(function(key){
@@ -44,7 +42,6 @@ export default Ember.Route.extend({
         }
       });
       answer.save();
-      this.transitionTo('question', question);
     },
     dislike(answer, params) {
       Object.keys(params).forEach(function(key){
@@ -53,7 +50,6 @@ export default Ember.Route.extend({
         }
       });
       answer.save();
-      this.transitionTo('question', question);
     }
   }
 });

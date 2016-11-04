@@ -9,16 +9,14 @@ export default Ember.Component.extend({
       }
     },
     upVote(answer) {
-      console.log(this.get('answer'), this.get('vote'));
-      this.get('vote', )
       var params = {
-        vote: this.get('vote', this.set('vote', this.get('vote') + 1)),
+        vote: this.get('vote', this.set('vote', this.get('answer.data.vote') + 1)),
       };
       this.sendAction('like', answer, params);
     },
     downVote(answer) {
       var params = {
-        vote: this.get('vote', this.set('vote', this.get('vote') - 1)),
+        vote: this.get('vote', this.set('vote', this.get('answer.data.vote') - 1)),
       };
       this.sendAction('dislike', answer, params);
     }
