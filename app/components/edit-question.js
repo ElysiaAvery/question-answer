@@ -13,7 +13,7 @@ export default Ember.Component.extend({
         author: this.get('author'),
         userQuestion: this.get('userQuestion'),
         notes: this.get('notes'),
-        tags: this.get('tags')
+        tags: this.get('tag')
       };
       this.set('showEditForm', false);
       this.sendAction('updateQuestion', question, params);

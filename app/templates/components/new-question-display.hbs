@@ -21,11 +21,11 @@
       <legend>Categories</legend>
       <select class="form-control" onchange={{action "selectTag" value="target.value"}}>
         {{#each tags as |tagChoice|}}
-          <option value={{tagChoice}} selected={{tagChoice}}>{{tagChoice}}</option>
+          <option id="tags" value={{tagChoice}} selected={{tagChoice}}>{{tagChoice}}</option>
         {{/each}}
       </select>
     </div>
-    
+
     <button {{action 'makeNewQuestion'}}>Add Question</button>
   </form>
 </div>
