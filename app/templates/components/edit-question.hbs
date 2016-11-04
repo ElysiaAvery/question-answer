@@ -4,18 +4,39 @@
     <form>
       <div class='form-group'>
         <label for="author">Enter Author Name: </label>
-        {{input value=author id="author" placeholder=question.author}}
+        {{input class="form-control" value=author id="author" placeholder=question.author}}
       </div>
 
       <div class='form-group'>
         <label for="userQuestion">Enter Question: </label>
-        {{textarea value=userQuestion id="userQuestion" placeholder=question.userQuestion}}
+        {{textarea class="form-control" value=userQuestion id="userQuestion" placeholder=question.userQuestion}}
       </div>
 
       <div class='form-group'>
-        <label for="author">Enter Additional Notes: </label>
-        {{textarea value=notes id="notes" placeholder=question.notes}}
+        <label for="notes">Enter Additional Notes: </label>
+        {{textarea class="form-control" value=notes id="notes" placeholder=question.notes}}
       </div>
+
+      <!-- <div class='form-group'>
+        <fieldset name="tags" multiple="" class="ui fluid dropdown">
+          <legend>Categories</legend>
+        {{input type="radio" name="tags" value="animals"}} Animals
+        {{input type="radio" name="tags" value="friends"}} Friends
+        {{input type="radio" name="tags" value="help"}} Help
+        {{input type="radio" name="tags" value="music"}} Music
+        {{input type="radio" name="tags" value="work"}} Work
+        {{input type="radio" name="tags" value="home"}} Home
+      </fieldset>
+      </div> -->
+      <div class='form-group'>
+        <legend>Categories</legend>
+        <select class="form-control" onchange={{action "selectTag" value="target.value"}}>
+          {{#each tags as |tagChoice|}}
+            <option value={{tagChoice}} selected={{tagChoice}}>{{tagChoice}}</option>
+          {{/each}}
+        </select>
+      </div>
+
 
       <button {{action 'updateQuestion' question}}>Update Question</button>
     </form>

@@ -4,18 +4,28 @@
   <form>
     <div class='form-group'>
       <label for="author">Enter Your Name: </label>
-      {{input value=author id="author"}}
+      {{input class="form-control" value=author id="author"}}
     </div>
 
     <div class='form-group'>
       <label for="userQuestion">Enter Your Question: </label>
-      {{textarea class=form-control value=userQuestion id="userQuestion"}}
+      {{textarea class="form-control" value=userQuestion id="userQuestion"}}
     </div>
 
     <div class='form-group'>
       <label for="notes">Enter Additional Notes: </label>
-      {{textarea class=form-control value=notes id="notes"}}
+      {{textarea class="form-control" value=notes id="notes"}}
     </div>
+
+    <div class='form-group'>
+      <legend>Categories</legend>
+      <select class="form-control" onchange={{action "selectTag" value="target.value"}}>
+        {{#each tags as |tagChoice|}}
+          <option value={{tagChoice}} selected={{tagChoice}}>{{tagChoice}}</option>
+        {{/each}}
+      </select>
+    </div>
+    
     <button {{action 'makeNewQuestion'}}>Add Question</button>
   </form>
 </div>
