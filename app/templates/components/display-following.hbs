@@ -3,5 +3,6 @@
   {{#each favoriteQuestions.questions as |question|}}
     <h2>{{#link-to 'questions' question.id}}{{question.userQuestion}}{{/link-to}}</h2>
     <h3>Asked By: {{question.author}}</h3>
+    <button {{action 'removeFromFollowing' question}}>Remove</button>
   {{/each}}
 </div>
